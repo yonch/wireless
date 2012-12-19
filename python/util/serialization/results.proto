@@ -1,0 +1,64 @@
+package results;
+
+message ErrorRateResults {
+	message DataPoint {
+		// The number of symbols transmitted for the packets whose statistics
+		// are collected in this point
+		required int32 num_symbols = 1;
+		
+		// The number of packets that terminated after num_symbols symbols
+		optional int32 num_finished = 2;
+		
+		// The number of packet errors among finished at num_symbols
+		optional int32 num_packet_errors = 3;
+		
+		// The number of bit errors in packets
+		optional int32 num_bit_errors = 4;
+	}
+		
+	repeated DataPoint points = 1;
+}
+
+
+message VoteResults {
+
+	message VoteCount {
+		// the number of symbols transmitted at the time of vote
+		required int32 num_symbols = 4;
+		
+		// The number voted for
+		required int32 votee = 1;
+		
+		// The number of votes for the votee
+		required int32 positive_votes = 2;
+		
+		// The total number of votes that were tallied
+		optional int32 total_votes = 3;
+	}
+	
+	repeated VoteCount votes = 1;
+}
+
+
+message SpinalWeightResults {
+	
+	message DecodeAttemptResult {
+		// The number of symbols of the statistic
+		required int32 num_symbols = 1;
+		
+		// The weights associated with the decode attempt.
+		// There should be exactly 6 weights:
+		// 	index 0: the total path weight of the most likely result 
+		// 	index 1: the edge       weight of the most likely result 
+		// 	index 2: the total path weight of the second most likely result 
+		// 	index 3: the edge       weight of the second most likely result
+		// 	index 4: the total path weight of a random result from third..last 
+		// 	index 5: the edge       weight of a random result from third..last
+		repeated float weights = 2 [packed=true];
+		
+		// The number of bit errors in the most-likely message 
+		optional int32 num_bit_errors = 3;
+	}
+	
+	repeated DecodeAttemptResult attempts = 1;
+}
