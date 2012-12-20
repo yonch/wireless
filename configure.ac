@@ -74,8 +74,10 @@ AC_CONFIG_FILES([Makefile src/Makefile \
 	bindings/Makefile bindings/itpp/Makefile bindings/codes/Makefile bindings/util/Makefile \
 	python/Makefile data/Makefile include/Makefile])
 
-# ITPP
-AC_CHECK_LIB([itpp], [main], [HAVE_LIBITPP=1], [AC_MSG_ERROR([itpp is not installed])])
+# IT++, using pkg-config as recommended by IT++ documentation
+PKG_CHECK_MODULES([ITPP], [itpp], [HAVE_LIBITPP=1])
+AC_SUBST([ITPP_LIBS])
+AC_SUBST([ITPP_CFLAGS])
 AC_CHECK_HEADERS([itpp/base/binary.h])
 AC_DEFINE([WITH_ITPP],[], [Use IT++ library])
 

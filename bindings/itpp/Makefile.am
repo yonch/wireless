@@ -17,23 +17,23 @@ itpp_python_PYTHON = __init__.py
 
 itpp_python_PYTHON += base_sparse.py
 _base_sparse_la_SOURCES = base_sparse.i
-_base_sparse_la_LIBADD = -litpp
+_base_sparse_la_LIBADD = $(ITPP_LIBS)
 
 itpp_python_PYTHON += base_vec.py
 _base_vec_la_SOURCES = base_vec.i
-_base_vec_la_LIBADD = -litpp
+_base_vec_la_LIBADD = $(ITPP_LIBS)
 
 itpp_python_PYTHON += ldpc.py
 _ldpc_la_SOURCES = ldpc.i
-_ldpc_la_LIBADD = -litpp
+_ldpc_la_LIBADD = $(ITPP_LIBS)
 
 itpp_python_PYTHON += llr.py
 _llr_la_SOURCES = llr.i
-_llr_la_LIBADD = -litpp
+_llr_la_LIBADD = $(ITPP_LIBS)
 
 itpp_python_PYTHON += modulator.py
 _modulator_la_SOURCES = modulator.i
-_modulator_la_LIBADD = -litpp
+_modulator_la_LIBADD = $(ITPP_LIBS)
 
 .i.cpp:
 	$(SWIG_CMD) -o $@ $<

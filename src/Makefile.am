@@ -21,7 +21,7 @@ libwireless_la_LDFLAGS = -Wl,-Bsymbolic-functions
 libwireless_la_LIBADD = lib_rf_misc.la   lib_rf_channels.la  lib_rf_mappers.la \
 	lib_rf_demappers.la  lib_rf_protocols.la \
 	lib_rf_codes.la  lib_rf_fountain.la lib_rf_strider.la  lib_rf_turbo.la lib_rf_ldpc.la \
-	lib_rf_inference.la lib_rf_hashes.la -litpp
+	lib_rf_inference.la lib_rf_hashes.la $(ITPP_LIBS)
 
 # Libspinal
 libspinal_la_SOURCES = \
@@ -31,7 +31,7 @@ libspinal_la_SOURCES = \
 	./codes/spinal/SpinalBranchEvaluator.cpp
 libspinal_la_CPPFLAGS = -I$(srcdir)/include -I$(top_srcdir)/include
 libspinal_la_LDFLAGS = -Wl,--exclude-libs=ALL -Wl,-Bsymbolic-functions
-libspinal_la_LIBADD = -l_rf_hashes -l_rf_mappers -l_rf_codes -l_rf_channels -l_rf_misc -litpp
+libspinal_la_LIBADD = -l_rf_hashes -l_rf_mappers -l_rf_codes -l_rf_channels -l_rf_misc $(ITPP_LIBS)
 
 # Individual components
 lib_rf_misc_la_SOURCES = \
