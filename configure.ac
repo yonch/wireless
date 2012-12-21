@@ -61,7 +61,7 @@ LT_INIT
 AM_PATH_PYTHON
 
 # SWIG configuration
-AX_PKG_SWIG(2.0.4, [], [ AC_MSG_ERROR([SWIG 2.0.4 or higher is required to build..]) ])
+AX_PKG_SWIG(2.0.7, [], [ AC_MSG_ERROR([SWIG 2.0.7 or higher is required to build..]) ])
 AX_SWIG_ENABLE_CXX
 # deprecated in SWIG 2.0.7: AX_SWIG_MULTI_MODULE_SUPPORT
 AX_SWIG_PYTHON
