@@ -1,7 +1,6 @@
 # Copyright (c) 2012 Jonathan Perry
 # This code is released under the MIT license (see LICENSE file).
 
-from CachedFactory import CachedFactory
 import wireless
 
 from wireless.protocols import OneTryProtocol
