@@ -1,5 +1,7 @@
 # bindings/codes Makefile
 
+SUBDIRS = spinal
+
 ## Flags and commands
 # use python flags; add project-wide include directory; only shared libraries are required.
 AM_CPPFLAGS += $(AX_SWIG_PYTHON_CPPFLAGS) -I$(top_srcdir)/include 
@@ -11,14 +13,9 @@ SWIG_CMD = $(SWIG) $(AX_SWIG_PYTHON_OPT) $(AX_SWIG_PYTHON_CPPFLAGS) $(AM_CPPFLAG
 codes_execdir = ${pkgpyexecdir}/codes
 codes_pythondir = ${pkgpythondir}/codes
 
-codes_exec_LTLIBRARIES = _spinal.la _codes.la _fountain.la _strider.la _turbo.la _ldpc.la \
-	_null.la
+codes_exec_LTLIBRARIES = _codes.la _fountain.la _strider.la _turbo.la _ldpc.la _null.la
 
 codes_python_PYTHON = __init__.py
-
-codes_python_PYTHON += spinal.py
-_spinal_la_SOURCES = spinal.i
-_spinal_la_LIBADD = -L../../src -lspinal
 
 codes_python_PYTHON += codes.py
 _codes_la_SOURCES = codes.i

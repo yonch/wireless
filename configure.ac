@@ -71,7 +71,8 @@ AC_CONFIG_HEADERS([config.h])
 
 # Files to be generated
 AC_CONFIG_FILES([Makefile src/Makefile \
-	bindings/Makefile bindings/itpp/Makefile bindings/codes/Makefile bindings/util/Makefile \
+	bindings/Makefile bindings/itpp/Makefile bindings/codes/Makefile 
+	bindings/codes/spinal/Makefile bindings/util/Makefile \
 	python/Makefile data/Makefile include/Makefile])
 
 # IT++, using pkg-config as recommended by IT++ documentation
