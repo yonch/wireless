@@ -8,3 +8,4 @@ build-aux
 install-sh
 missing
 py-compile
+release/
