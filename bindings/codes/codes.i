@@ -2,7 +2,7 @@
  * Copyright (c) 2012 Jonathan Perry
  * This code is released under the MIT license (see LICENSE file).
  */
-%module(package="wireless.codes") codes
+%module(package="wireless") codes
 
 %include "std_vector.i"
 %include "common.i"
