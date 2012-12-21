@@ -1,6 +1,5 @@
 import codes
 
-from CachedFactory import CachedFactory
 from ChannelFactory import ChannelFactory
 from DemapFactory import DemapFactory
 from DetectorFactory import DetectorFactory
