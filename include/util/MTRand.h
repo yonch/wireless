@@ -86,7 +86,7 @@ protected:
 // Methods
 public:
 	MTRand( const uint32 oneSeed );  // initialize with a simple uint32
-	MTRand( uint32 *const bigSeed, uint32 const seedLength = N );  // or array
+	MTRand( const uint32 *const bigSeed, uint32 const seedLength = N );  // or array
 	MTRand();  // auto-initialize with /dev/urandom or time() and clock()
 	MTRand( const std::vector<uint32>& vectorSeed );  // initialize with a list of uint32s
 	MTRand( const MTRand& o );  // copy
@@ -114,7 +114,7 @@ public:
 	
 	// Re-seeding functions with same behavior as initializers
 	void seed( const uint32 oneSeed );
-	void seed( uint32 *const bigSeed, const uint32 seedLength = N );
+	void seed( const uint32 *const bigSeed, const uint32 seedLength = N );
 	void seed( const std::vector<uint32>& vectorSeed );
 	void seed();
 	
@@ -207,7 +207,7 @@ inline void MTRand::seed( const uint32 oneSeed )
 	reload();
 }
 
-inline void MTRand::seed( uint32 *const bigSeed, const uint32 seedLength )
+inline void MTRand::seed( const uint32 *const bigSeed, const uint32 seedLength )
 {
 	// Seed the generator with an array of uint32's
 	// There are 2^19937-1 possible initial states.  This function allows
@@ -277,7 +277,7 @@ inline void MTRand::seed()
 inline MTRand::MTRand( const uint32 oneSeed )
 	{ seed(oneSeed); }
 
-inline MTRand::MTRand( uint32 *const bigSeed, const uint32 seedLength )
+inline MTRand::MTRand( const uint32 *const bigSeed, const uint32 seedLength )
 	{ seed(bigSeed,seedLength); }
 
 inline MTRand::MTRand( const std::vector<uint32>& vectorSeed )
