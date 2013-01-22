@@ -19,9 +19,11 @@
 #include <string>
 #include <complex>
 #include "CodeBench.h"
+#include "util/MTRand.h"
 %}
 
 %include "CodeBench.h"
+%include "util/MTRand.h"
 
 %pythoncode %{
 Symbol = int
