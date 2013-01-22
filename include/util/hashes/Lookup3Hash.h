@@ -26,6 +26,8 @@ public:
 	static void update(State& state, unsigned int data);
 
 	static Digest digest(const State& state);
+
+	static uint64_t digest_extended(const State& state);
 };
 
 class Lookup3SymbolFunction{

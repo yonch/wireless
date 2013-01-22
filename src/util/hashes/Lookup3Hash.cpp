@@ -32,6 +32,10 @@ Lookup3Hash::Digest Lookup3Hash::digest(const State& state) {
 	return state[2];
 }
 
+uint64_t Lookup3Hash::digest_extended(const State& state) {
+	return state[2] | (uint64_t(state[1]) << 32);
+}
+
 
 /**************************
  * Lookup3SymbolFunction
