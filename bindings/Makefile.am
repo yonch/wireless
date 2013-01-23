@@ -51,3 +51,33 @@ _protocols_la_LIBADD = -L../src -lwireless
 
 .i.cpp: general.i common.i
 	$(SWIG_CMD) -o $@ $<
+	
+# Install SWIG wrapper files into includedir/bindings
+binding_includedir = ${pkgincludedir}/bindings
+nobase_dist_binding_include_HEADERS = \
+	./mappers.i \
+	./common.i \
+	./misc.i \
+	./channels.i \
+	./codes/codes.i \
+	./codes/spinal/spinal.i \
+	./codes/fountain.i \
+	./codes/codes_workaround.i \
+	./codes/turbo.i \
+	./codes/ldpc.i \
+	./codes/strider.i \
+	./codes/null.i \
+	./mappers_workaround.i \
+	./itpp/llr.i \
+	./itpp/modulator.i \
+	./itpp/base_sparse.i \
+	./itpp/ldpc.i \
+	./itpp/base_vec.i \
+	./demappers_workaround.i \
+	./demappers.i \
+	./numpy.i \
+	./general.i \
+	./util/hashes.i \
+	./util/config.i \
+	./util/inference.i \
+	./protocols.i
