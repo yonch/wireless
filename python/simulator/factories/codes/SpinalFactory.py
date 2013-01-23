@@ -7,7 +7,7 @@ class SpinalFactory(object):
         if codeSpec['type'] != 'spinal':
             return None
         
-        spineLength = self._get_spine_length(codeSpec, packetLength)
+        spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
 
         # get un-punctured encoder
         unpuncturedEncoder = self._make_unpunctured_encoder(codeSpec, spineLength)
@@ -26,7 +26,7 @@ class SpinalFactory(object):
         if decodeSpec['type'] not in ['regular', 'lookahead', 'parallel']:
             return None
         
-        spineLength = self._get_spine_length(codeSpec, packetLength)
+        spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
 
         # make un-punctured decoder
         unpuncturedDecoder, valueType = self._make_unpunctured_decoder(codeSpec, 
@@ -54,14 +54,14 @@ class SpinalFactory(object):
     
     def make_protocol(self, protoSpec, codeSpec, packetLength):
         if protoSpec['type'] == 'faster':
-            spineLength = self._get_spine_length(codeSpec, packetLength)
+            spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
             punc = self._get_puncturing(codeSpec, spineLength)
 
             return FastFourwayProtocol(1,
                                        protoSpec['maxPasses'],
                                        punc)
         elif protoSpec['type'] == 'sequential':
-            spineLength = self._get_spine_length(codeSpec, packetLength)
+            spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
             
             if codeSpec['puncturing']['type'] != '8-way':
                 raise RuntimeError, "unsupported puncturing schedule for sequential protocol"
@@ -194,11 +194,11 @@ class SpinalFactory(object):
 
 
     @staticmethod
-    def _get_spine_length(codeSpec, packetLength):
+    def _get_num_blocks(k, packetLength):
         # calculate number of code steps
-        if packetLength % codeSpec['k'] != 0:
-            raise RuntimeError, 'packet length not multiple of k'
-        return (packetLength / codeSpec['k'])
+        if packetLength % k != 0:
+            raise RuntimeError, 'packet length (=%d) not multiple of k (=%d)' % (packetLength, k)
+        return (packetLength / k)
     
     @staticmethod
     def _get_puncturing(codeSpec, spineLength, forEncoder):
