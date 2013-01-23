@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <stdint.h>
 #include <tr1/memory>
-#include "codes/IDecoder.h"
+#include "IDecoder.h"
 
 template<typename ChannelSymbol>
 class IMultiStreamDecoder {

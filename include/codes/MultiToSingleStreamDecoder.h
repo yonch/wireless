@@ -9,8 +9,8 @@
 #include <stdexcept>
 #include <tr1/memory>
 #include "CodeBench.h"
-#include "codes/IDecoder.h"
-#include "codes/IMultiStreamDecoder.h"
+#include "IDecoder.h"
+#include "IMultiStreamDecoder.h"
 
 
 

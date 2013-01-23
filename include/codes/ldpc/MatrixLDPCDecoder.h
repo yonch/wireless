@@ -10,7 +10,7 @@
 #include "MatrixLDPCCode.h"
 #include "../IDecoder.h"
 #include "../../OracleDetector.h"
-#include "util/inference/bp/MessagePassingDecoder.h"
+#include "../../util/inference/bp/MessagePassingDecoder.h"
 
 using namespace std;
 

@@ -7,7 +7,7 @@
 #include <vector>
 #include <stdint.h>
 #include "../CodeBench.h"
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 #include "CoherenceFading.h"
 
 /**

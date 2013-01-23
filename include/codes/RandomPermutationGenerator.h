@@ -4,7 +4,7 @@
  */
 #pragma once
 
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 
 class RandomPermutationGenerator {
 public:

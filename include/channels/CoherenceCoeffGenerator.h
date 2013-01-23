@@ -7,7 +7,7 @@
 #include <vector>
 #include <stdint.h>
 #include "../CodeBench.h"
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 
 /**
  * Generates fading coefficients for coherence-time based fading

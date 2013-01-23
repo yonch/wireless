@@ -4,7 +4,7 @@
  */
 #pragma once
 
-#include "codes/puncturing/StridedPuncturingSchedule.h"
+#include "../puncturing/StridedPuncturingSchedule.h"
 #include "protocols/SequentialProtocol.h"
 
 

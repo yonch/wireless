@@ -6,9 +6,9 @@
 
 #include <string>
 #include <vector>
-#include "codes/IEncoder.h"
+#include "IEncoder.h"
 
-#include "codes/IMultiStreamEncoder.h"
+#include "IMultiStreamEncoder.h"
 #include "puncturing/IPuncturingSchedule.h"
 
 

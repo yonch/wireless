@@ -68,7 +68,7 @@ private:
 };
 
 
-#include "util/Utils.h"
+#include "../../util/Utils.h"
 #include <algorithm>
 
 template<typename SymbolFunction, typename NeighborGenerator>

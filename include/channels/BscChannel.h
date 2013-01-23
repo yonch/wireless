@@ -7,7 +7,7 @@
 
 #include <vector>
 #include "../CodeBench.h"
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 
 using std::vector;
 

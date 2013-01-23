@@ -6,8 +6,8 @@
 
 #include <vector>
 #include <itpp/comm/llr.h>
-#include "util/inference/bp/NodeUpdater.h"
-#include "util/inference/bp/BipartiteBP.h"
+#include "../../util/inference/bp/NodeUpdater.h"
+#include "../../util/inference/bp/BipartiteBP.h"
 
 
 /**

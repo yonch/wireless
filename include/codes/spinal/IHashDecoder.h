@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <stdint.h>
 #include <tr1/memory>
-#include "codes/IMultiStreamDecoder.h"
+#include "../IMultiStreamDecoder.h"
 
 struct SpinalDecodeResult : public DecodeResult {
 	SpinalDecodeResult(const std::string& _packet, float _logProbError)

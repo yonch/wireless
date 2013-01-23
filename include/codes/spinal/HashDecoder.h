@@ -5,7 +5,7 @@
 #pragma once
 
 #include <vector>
-#include "util/inference/hmm/BeamSearch.h" // For SearchIntermediateResult
+#include "../../util/inference/hmm/BeamSearch.h" // For SearchIntermediateResult
 
 #include "IHashDecoder.h"
 #include "SpinalBranchEvaluator.h"

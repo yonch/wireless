@@ -8,7 +8,7 @@
 #include <complex>
 #include <stdint.h>
 #include "../CodeBench.h"
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 
 /**
  * Concatenates two channels, to make a new channel

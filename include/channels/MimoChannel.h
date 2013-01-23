@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <boost/numeric/ublas/matrix.hpp>
 #include "../CodeBench.h"
-#include "util/MTRand.h"
+#include "../util/MTRand.h"
 
 using namespace std;
 

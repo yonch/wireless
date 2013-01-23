@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include "CodeBench.h"
-#include "codes/IMultiStreamEncoder.h"
+#include "../IMultiStreamEncoder.h"
 
 template<typename SpineValueType>
 class HashEncoder : public IMultiStreamEncoder

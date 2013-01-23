@@ -7,8 +7,8 @@
 #include <tr1/memory>
 #include <vector>
 #include "CodeBench.h"
-#include "codes/IDecoder.h"
-#include "codes/IMultiStreamEncoder.h"
+#include "../IDecoder.h"
+#include "../IMultiStreamEncoder.h"
 #include "IHashDecoder.h"
 
 // Forward declarations

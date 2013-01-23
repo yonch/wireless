@@ -8,7 +8,7 @@
 #include <vector>
 
 #include <itpp/comm/ldpc.h>
-#include "util/hashes/BitwiseXor.h"
+#include "../../util/hashes/BitwiseXor.h"
 #include "ParityEncoder.h"
 #include "LTParityNeighborGenerator.h"
 #include "../../CodeBench.h"

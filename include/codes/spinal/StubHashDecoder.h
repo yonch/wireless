@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "CodeBench.h"
-#include "codes/IDecoder.h"
+#include "../IDecoder.h"
 using namespace std;
 
 
