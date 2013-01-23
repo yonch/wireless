@@ -13,7 +13,7 @@ class SpinalFactory(object):
         unpuncturedEncoder = self._make_unpunctured_encoder(codeSpec, spineLength)
         
         # Choose puncturing
-        punc = self._get_puncturing(codeSpec, spineLength, forEncoder=True)
+        punc = self._get_puncturing(codeSpec['puncturing'], spineLength, forEncoder=True)
         
         # punctured encoder
         encoder = wireless.codes.MultiToSingleStreamEncoder(unpuncturedEncoder, punc)
@@ -37,7 +37,7 @@ class SpinalFactory(object):
         
         
         # Get puncturing
-        punc = self._get_puncturing(codeSpec, spineLength, forEncoder=False)
+        punc = self._get_puncturing(codeSpec['puncturing'], spineLength, forEncoder=False)
 
         PuncturedDecoderType = self._get_punctured_decoder_type(valueType)
     
@@ -55,7 +55,7 @@ class SpinalFactory(object):
     def make_protocol(self, protoSpec, codeSpec, packetLength):
         if protoSpec['type'] == 'faster':
             spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
-            punc = self._get_puncturing(codeSpec, spineLength)
+            punc = self._get_puncturing(codeSpec['puncturing'], spineLength)
 
             return FastFourwayProtocol(1,
                                        protoSpec['maxPasses'],
@@ -201,27 +201,24 @@ class SpinalFactory(object):
         return (packetLength / k)
     
     @staticmethod
-    def _get_puncturing(codeSpec, spineLength, forEncoder):
-        if codeSpec['type'] != 'spinal':
-            raise RuntimeError, "Puncturing for non-spinal codes unimplemented"
-        
+    def _get_puncturing(punctureSpec, numStreams, forEncoder):
         # Choose puncturing
         import wireless
-        if codeSpec['puncturing']['type'] == '8-way':
+        if punctureSpec['type'] == '8-way':
             puncturing = wireless.codes.StridedPuncturingSchedule(
-                                    spineLength,
-                                    codeSpec['puncturing']['numLastCodeStep'])
-        elif codeSpec['puncturing']['type'] == 'static':
+                                    numStreams,
+                                    punctureSpec['numLastCodeStep'])
+        elif punctureSpec['type'] == 'static':
             puncturing = wireless.codes.StaticPuncturingSchedule()
-            schedule = wireless.vectorus(codeSpec['puncturing']['schedule'])
+            schedule = wireless.vectorus(punctureSpec['schedule'])
             puncturing.set(schedule)
         else:
-            raise RuntimeError, 'unknown puncturing type %s' % codeSpec['puncturing']['type'] 
+            raise RuntimeError, 'unknown puncturing type %s' % punctureSpec['type'] 
     
         
         # Choose the repetition ratio for the puncturing
-        if codeSpec['puncturing'].has_key('encoderToSymbolRate'):
-            encoderRate, symbolRate = codeSpec['puncturing']['encoderToSymbolRate']
+        if punctureSpec.has_key('encoderToSymbolRate'):
+            encoderRate, symbolRate = punctureSpec['encoderToSymbolRate']
             if forEncoder:
                 repeatRatio = encoderRate
             else:
