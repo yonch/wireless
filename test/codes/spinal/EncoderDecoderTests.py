@@ -4,10 +4,10 @@ Created on Jan 9, 2011
 @author: yonch
 '''
 import unittest
-import hashes
-import spinal
-import spinal.reference
 import wireless
+import wireless.util.hashes as hashes
+import wireless.codes.spinal as spinal
+import wireless.codes.spinal.reference as reference
 import numpy
 
 
@@ -20,7 +20,7 @@ class EncoderDecoderTests(unittest.TestCase):
         
         cppSalsa = hashes.SalsaUnlimitedHash(INITIAL_VALUE, DATA)
         
-        pyDigest, pyState = spinal.reference.SalsaHash.unlimitedHash(INITIAL_VALUE, DATA, NUM_COMPARED_VALUES, NUM_ROUNDS)
+        pyDigest, pyState = reference.SalsaHash.unlimitedHash(INITIAL_VALUE, DATA, NUM_COMPARED_VALUES, NUM_ROUNDS)
         
         self.assertEquals(pyDigest, cppSalsa.getSeed())
         self.assertTrue(pyState[:NUM_COMPARED_VALUES] == [cppSalsa.next() for i in xrange(NUM_COMPARED_VALUES)])
@@ -31,7 +31,7 @@ class EncoderDecoderTests(unittest.TestCase):
         NUM_PASSES = 5
         NUM_LAST_CODE_STEP_SYMBOLS = 2
         
-        codeParams = spinal.reference.CodeParams(salsaNumRounds = 12,
+        codeParams = reference.CodeParams(salsaNumRounds = 12,
                                          hashWordSize = 64,
                                          numBitsPerCodingStep = 4,
                                          symbolSizeBits = 16,
@@ -69,7 +69,7 @@ class EncoderDecoderTests(unittest.TestCase):
                           cppSymbols)
         
         # Encode with python encoder
-        pyEncoder = spinal.reference.Encoder(codeParams)
+        pyEncoder = reference.Encoder(codeParams)
         pySymbols = pyEncoder.encode(packet, numSymbolsForCodingStep)
 
         # Check the two encoders produced the same symbols
@@ -82,7 +82,7 @@ class EncoderDecoderTests(unittest.TestCase):
         NUM_LAST_CODE_STEP_SYMBOLS = 2
         BEAM_WIDTH = 16
 
-        codeParams = spinal.reference.CodeParams(salsaNumRounds = 12,
+        codeParams = reference.CodeParams(salsaNumRounds = 12,
                                          hashWordSize = 64,
                                          numBitsPerCodingStep = 3,
                                          symbolSizeBits = 10,
@@ -141,7 +141,7 @@ class EncoderDecoderTests(unittest.TestCase):
     def test_004_DecoderIntermediateState(self):
         NUM_CODING_STEPS = 10
         BEAM_WIDTH = 16
-        codeParams = spinal.reference.CodeParams(salsaNumRounds = 12,
+        codeParams = reference.CodeParams(salsaNumRounds = 12,
                                          hashWordSize = 64,
                                          numBitsPerCodingStep = 3,
                                          symbolSizeBits = 10,
@@ -159,7 +159,7 @@ class EncoderDecoderTests(unittest.TestCase):
 
         cppDecoder.initialize()
         
-        pyDecoder = spinal.reference.Decoder(codeParams, BEAM_WIDTH)
+        pyDecoder = reference.Decoder(codeParams, BEAM_WIDTH)
         
         for step in xrange(NUM_CODING_STEPS):
             # decide on number of symbols
