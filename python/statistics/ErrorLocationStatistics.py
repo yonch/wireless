@@ -68,7 +68,7 @@ class ErrorLocationStatistics(object):
         # if this is the first time when finished() == True, update statistics
         if isFinished:
             if self.mayUpdate:
-                self.statistics.error_locations = 
+                self.statistics.error_locations = \
                     wireless.Utils.XorStrings(self.packet, decodeResult.packet)
                 
                 self.mayUpdate = False

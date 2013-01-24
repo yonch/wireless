@@ -40,6 +40,7 @@ nobase_dist_pkgpython_PYTHON = \
 	./protocols/MultipleTryProtocol.py \
 	./statistics/__init__.py \
 	./statistics/ErrorRateStatistics.py \
+	./statistics/ErrorLocationStatistics.py \
 	./util/serialization/__init__.py
 
 
