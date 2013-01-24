@@ -103,6 +103,11 @@ public:
 						const std::string& src, unsigned int src_offset,
 						unsigned int num_bits);
 
+	/**
+	 * bitwise XORs the two bit strings, returning the result.
+	 */
+	static std::string XorStrings(const std::string& a, const std::string& b);
+
 };
 
 template<typename BlockType>

@@ -270,6 +270,20 @@ std::string Utils::returnCopiedBits(const std::string & dst,
 
 
 
+std::string Utils::XorStrings(const std::string& a, const std::string& b) {
+	if (a.size() != b.size()) {
+		throw std::runtime_error("String lengths do not match");
+	}
 
+	const uint32_t num_bytes = a.size();
 
+	// Allocate result string
+	std::string res(num_bytes, 0);
 
+	// Perform XOR
+	for (uint32_t i = 0; i < num_bytes; i++) {
+		res[i] = a[i] ^ b[i];
+	}
+
+	return res;
+}
