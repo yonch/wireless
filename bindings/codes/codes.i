@@ -7,7 +7,7 @@
 %include "std_vector.i"
 %include "common.i"
 %import "general.i"
-%include "codes_workaround.i"
+%include "codes/codes_workaround.i"
 
 /////////////////
 // numpy
