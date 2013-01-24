@@ -5,7 +5,7 @@
 #include <stdexcept>
 
 #include "../../util/Utils.h"
-#include "CodeBench.h"
+#include "../../CodeBench.h"
 
 // IMPLEMENTATION OF INLINE FUNCTIONS.
 // SHOULD ONLY BE INCLUDED FROM HashEncoder.h

@@ -6,7 +6,7 @@
 
 #include <vector>
 #include <stdint.h>
-#include "CodeBench.h"
+#include "../../CodeBench.h"
 #include "../../channels/CoherenceFading.h"
 
 

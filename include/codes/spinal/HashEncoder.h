@@ -6,7 +6,7 @@
 
 #include <string>
 #include <vector>
-#include "CodeBench.h"
+#include "../../CodeBench.h"
 #include "../IMultiStreamEncoder.h"
 
 template<typename SpineValueType>

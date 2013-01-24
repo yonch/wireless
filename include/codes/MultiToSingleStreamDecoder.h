@@ -8,7 +8,7 @@
 #include <vector>
 #include <stdexcept>
 #include <tr1/memory>
-#include "CodeBench.h"
+#include "../CodeBench.h"
 #include "IDecoder.h"
 #include "IMultiStreamDecoder.h"
 

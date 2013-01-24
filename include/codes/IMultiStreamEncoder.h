@@ -8,7 +8,7 @@
 #include <vector>
 #include <stdint.h>
 #include <tr1/memory>
-#include "CodeBench.h"
+#include "../CodeBench.h"
 
 /**
  * The IMultiStreamEncoder interface is suitable for codes where values can be generated from

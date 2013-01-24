@@ -6,7 +6,7 @@
 
 #include <tr1/memory>
 #include <vector>
-#include "CodeBench.h"
+#include "../../CodeBench.h"
 #include "../IDecoder.h"
 #include "../IMultiStreamEncoder.h"
 #include "IHashDecoder.h"
