@@ -204,7 +204,7 @@ class SpinalFactory(object):
     def _get_puncturing(punctureSpec, numStreams, forEncoder):
         # Choose puncturing
         import wireless
-        if punctureSpec['type'] == '8-way':
+        if punctureSpec['type'] == '8-way-v2':
             puncturing = wireless.codes.StridedPuncturingSchedule(
                                     numStreams,
                                     punctureSpec['numLastCodeStep'])

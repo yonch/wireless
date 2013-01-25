@@ -6,7 +6,7 @@
 #include "codes/puncturing/StridedPuncturingSchedule.h"
 
 
-const unsigned int StridedPuncturingSchedule::m_moduluOfSubpass[8] = {4,0,6,2,7,3,5,1};
+const unsigned int StridedPuncturingSchedule::m_moduluOfSubpass[8] = {7,3,5,1,4,0,6,2};
 
 StridedPuncturingSchedule::StridedPuncturingSchedule(
 										unsigned int numStreams,
