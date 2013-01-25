@@ -158,28 +158,34 @@ void Utils::unblockify(const std::vector<BlockType>& blocks,
 	unsigned int sizeBytes = (((unsigned int)blocks.size() * blockNumBits) + 7) / 8;
 	strData.resize( sizeBytes , 0 );
 
+	// The current character we're writing to
+	uint8_t *ch_p = (uint8_t*) strData.data();
+	// The number of bits that haven't been filled with data yet
+	int char_remaining_bits = 8;
+
 	// for each block
-	BlockType data = 0;
-	int curNumBits = 0;
-	int curExtractedBytes = 0;
 	for(unsigned int i = 0; i < blocks.size(); i++) {
-		data |= (blocks[i] << curNumBits);
-		curNumBits += blockNumBits;
+		BlockType data = blocks[i];
+		int data_remaining_bits = blockNumBits;
 
-		while(curNumBits >= 8) {
-			// get a byte out of 'data'
-			strData[curExtractedBytes] = data & 0xff;
-			curExtractedBytes++;
+		// Fill up as many full bytes as possible
+		while(char_remaining_bits <= data_remaining_bits) {
+			// We can fill up the string byte
+			*ch_p |= (data << (8 - char_remaining_bits));
 
-			// update data
-			data = data >> 8;
-			curNumBits -= 8;
+			// Update data and count of remaining bits in data
+			data >>= char_remaining_bits;
+			data_remaining_bits -= char_remaining_bits;
+
+			// Advance to next string byte
+			ch_p++;
+			char_remaining_bits = 8;
 		}
-	}
 
-	// If we have a remainder of bits, store into string
-	if (curNumBits > 0) {
-		strData[curExtractedBytes] = data & 0xff;
+		if(data_remaining_bits > 0) {
+			*ch_p |= (data << (8 - char_remaining_bits));
+			char_remaining_bits -= data_remaining_bits;
+		}
 	}
 }
 
