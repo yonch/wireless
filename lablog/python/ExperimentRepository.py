@@ -25,6 +25,12 @@ def toUniqueHash(d):
     import hashlib
     return hashlib.sha1(toUniqueString(d)).digest()
 
+class BundleExistsError (Exception):
+    def __init__(self, bundle_id):
+        self.bundle_id = bundle_id
+    def __str__(self):
+        return "bundle ID: " + repr(bundle_id)
+
 class ExperimentRepository(object):
     """
     Stores required experiments and results. Users specify what experiments
@@ -316,7 +322,7 @@ class ExperimentRepository(object):
         
         # Check bundle doesn't already exist
         if self._bundleIdsDb.has_key(bundleID, txn=self.txn):
-            raise RuntimeError, "bundle ID %s already exists" % bundleID
+            raise BundleExistsError(bundleID)
         
         # Add the bundle ID into the bundle table
         self._bundleIdsDb.put(bundleID, "", txn=self.txn)
