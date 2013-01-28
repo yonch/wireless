@@ -148,4 +148,5 @@ nobase_dist_pkginclude_HEADERS = \
 	./util/inference/hmm/PrunedBFS.h \
 	./util/ItppUtils.h \
 	./util/MTRand.h \
+	./util/BitStatCounter.h \
 	./util/Utils.h

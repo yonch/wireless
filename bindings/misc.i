@@ -46,3 +46,9 @@
 %}
 %include "util/Utils.h"
 %template(BlockifyUint32) Utils::blockify<uint32_t>;
+
+// Extra utils:
+%{
+#include "util/BitStatCounter.h"
+%}
+%include "util/BitStatCounter.h"

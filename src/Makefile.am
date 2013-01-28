@@ -38,6 +38,7 @@ lib_rf_misc_la_SOURCES = \
 	./util/ItppUtils.cpp \
 	./util/Utils.cpp \
 	./util/crc.cpp \
+	./util/BitStatCounter.cpp \
 	./CrcPacketGenerator.cpp \
 	./PacketGenerator.cpp
 lib_rf_channels_la_SOURCES = \
