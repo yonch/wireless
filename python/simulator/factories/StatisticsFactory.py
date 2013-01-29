@@ -7,7 +7,7 @@ class StatisticsFactory(object):
     def make_statistics(self, spec):
         if spec['type'] == 'errors':
             return ErrorRateStatistics(1)
-        elif spec['type'] == 'error-location':
+        elif spec['type'] == 'bit-statistics':
             return ErrorLocationStatistics(1)
         else:
             return None
