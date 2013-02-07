@@ -149,4 +149,5 @@ nobase_dist_pkginclude_HEADERS = \
 	./util/ItppUtils.h \
 	./util/MTRand.h \
 	./util/BitStatCounter.h \
+	./util/BlockStatCounter.h \
 	./util/Utils.h

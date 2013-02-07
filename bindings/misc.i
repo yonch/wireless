@@ -50,5 +50,7 @@
 // Extra utils:
 %{
 #include "util/BitStatCounter.h"
+#include "util/BlockStatCounter.h"
 %}
 %include "util/BitStatCounter.h"
+%include "util/BlockStatCounter.h"
