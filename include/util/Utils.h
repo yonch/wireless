@@ -108,6 +108,14 @@ public:
 	 */
 	static std::string XorStrings(const std::string& a, const std::string& b);
 
+	/**
+	 * Returns the index of the first bit that differs between the two strings, counting 0 as the
+	 *     LSB of the first character, up to the MSB of the last character
+	 *
+	 * If the strings match perfectly, returns 8*a.size() (i.e., one after the index of the MSB bit)
+	 */
+	static int find_first_difference(const std::string& a, const std::string& b);
+
 };
 
 template<typename BlockType>

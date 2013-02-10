@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdexcept>
 #include <stdint.h>
+#include <strings.h> // for ffs()
 #include "util/crc.h"
 
 void Utils::stringToVector(	const std::string& strData,
@@ -286,4 +287,24 @@ std::string Utils::XorStrings(const std::string& a, const std::string& b) {
 	}
 
 	return res;
+}
+
+
+int Utils::find_first_difference(const std::string& a, const std::string& b) {
+	if (a.size() != b.size()) {
+		throw std::runtime_error("String lengths do not match");
+	}
+
+	const uint32_t num_bytes = a.size();
+	int result = 0;
+	for(uint32_t i = 0; i < num_bytes; i++, result+=8) {
+		if(a[i] != b[i]) {
+			// Found a differing byte, find differing bit
+			uint8_t c = uint8_t(a[i]) ^ uint8_t(b[i]);
+			return result + ffs(c) - 1;
+		}
+	}
+
+	// string match, result should now contain the index after the last bit.
+	return result;
 }
