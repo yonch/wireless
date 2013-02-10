@@ -13,7 +13,7 @@ def runTest():
         'packetGen': {'type': 'random',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -44,7 +44,7 @@ def runParallelKTest():
         'packetGen': {'type': 'random',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -76,7 +76,7 @@ def runCoherenceFadingTest():
         'packetGen': {'type': 'random',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -107,7 +107,7 @@ def runRateApproxProtocolTest():
         'packetGen': {'type': 'random',
                       'length': 24},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -141,7 +141,7 @@ def runGaussianTest():
         'packetGen': {'type': 'random',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -330,7 +330,7 @@ def runLookaheadTest():
         'packetGen': {'type': 'random',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -472,7 +472,7 @@ def runCrcTest():
         'packetGen': {'type': 'crc16',
                       'length': 300},
         'code': {'type': 'spinal',
-                 'puncturing': {'type': '8-way',
+                 'puncturing': {'type': '8-way-v2',
                                 'numLastCodeStep': 2},
                  'hash': 'one-at-a-time',
                  'bitsPerSymbol': 10,
@@ -497,7 +497,37 @@ def runCrcTest():
                                100)
     print str(res)
 
-
+def runFirstErrorStatisticsTest():
+    experimentSpec = {
+        'packetGen': {'type': 'random',
+                      'length': 256},
+        'code': {'type': 'spinal',
+                 'puncturing': {'type': '8-way-v2',
+                                'numLastCodeStep': 2},
+                 'hash': 'one-at-a-time',
+                 'bitsPerSymbol': 10,
+                 'k': 4},
+        'map': {'type': 'linear',
+                'bitsPerSymbol': 10,
+                'precisionBits': 14},
+        'channel': {'type': 'AWGN',
+                    'SNR_dB': -2},
+        'demap': {'type': 'null'},
+        'decoder': {'type': 'regular',
+                   'beamWidth': 100,
+                   'maxPasses': 48*8},
+        'detector': {'type': 'oracle'},
+        'protocol': {'type': 'one-try',
+                     'numSymbols': 256*2},
+        'statistics': {'type': 'first-error'}
+        }
+    runner = Simulator(1)
+    for i in xrange(10):
+        res = runner.runExperiment(experimentSpec, 
+                                   numpy.random.RandomState().tomaxint(4), 
+                                   1)
+        print str(res),
+    print 
 
 runTest()
 runCrcTest()
@@ -520,5 +550,6 @@ runShortStriderTest()
 runStriderFadingTest()
 runStriderTransparentFadingTest()
 
-
 runNullDecoderTest()
+
+runFirstErrorStatisticsTest()
