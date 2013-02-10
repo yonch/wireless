@@ -41,6 +41,7 @@ nobase_dist_pkgpython_PYTHON = \
 	./statistics/__init__.py \
 	./statistics/ErrorRateStatistics.py \
 	./statistics/ErrorLocationStatistics.py \
+	./statistics/FirstErrorStatistics.py \
 	./util/serialization/__init__.py
 
 

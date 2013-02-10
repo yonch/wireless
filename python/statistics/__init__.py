@@ -1,2 +1,3 @@
 from ErrorRateStatistics import ErrorRateStatistics
 from ErrorLocationStatistics import ErrorLocationStatistics
+from FirstErrorStatistics import FirstErrorStatistics
