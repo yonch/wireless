@@ -63,7 +63,7 @@ class SpinalFactory(object):
         elif protoSpec['type'] == 'sequential':
             spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
             
-            if codeSpec['puncturing']['type'] != '8-way':
+            if codeSpec['puncturing']['type'] != '8-way-v2':
                 raise RuntimeError, "unsupported puncturing schedule for sequential protocol"
 
             numSubpasses = protoSpec['maxPasses']
