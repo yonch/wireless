@@ -164,10 +164,12 @@ uint16_t Utils::getArrCRC16(const unsigned char *a, unsigned int len) {
 }
 
 bool Utils::passesCRC16(const std::string & a) {
-	const char *packetCRCptr = &(a.data()[a.size()-2]);
-	unsigned short packetCRC = ntohs(*((const unsigned short*)packetCRCptr));
+	uint16_t computedCRC =
+			Utils::getArrCRC16((const uint8_t*)a.data() + 2, a.size() - 2);
 
-	return (packetCRC == getArrCRC16((const unsigned char*)a.data(), a.size()-2));
+	uint16_t packetCRC = *(const uint16_t*)a.data();
+
+	return (packetCRC == computedCRC);
 }
 
 uint32_t Utils::getCRC32(const std::string& a)
