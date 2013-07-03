@@ -98,7 +98,6 @@ nobase_dist_pkginclude_HEADERS = \
 	./demappers/ItppDemapper.hh \
 	./demappers/NullDemapper.h \
 	./mappers/ComplexLinearMapper.h \
-	./mappers/EvenModulator.h \
 	./mappers/GaussianMapper.h \
 	./mappers/GrayMapper.h \
 	./mappers/IMapper.h \

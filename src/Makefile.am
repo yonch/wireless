@@ -48,7 +48,6 @@ lib_rf_channels_la_SOURCES = \
 	./channels/MimoChannel.cpp
 lib_rf_mappers_la_SOURCES = \
 	./mappers/NormalDistribution.cpp \
-	./mappers/EvenModulator.cpp \
 	./mappers/QPSKMapper.cpp \
 	./mappers/TruncatedNormalDistribution.cpp \
 	./mappers/GaussianMapper.cpp \
