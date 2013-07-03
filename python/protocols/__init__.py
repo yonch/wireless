@@ -3,4 +3,3 @@
 from protocols import *
 
 from MultipleTryProtocol import MultipleTryProtocol
-from FastFourwayProtocol import FastFourwayProtocol

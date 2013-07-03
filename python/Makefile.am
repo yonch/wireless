@@ -35,7 +35,6 @@ nobase_dist_pkgpython_PYTHON = \
 	./simulator/Simulator.py \
 	./simulator/__init__.py \
 	./simulator/SanityTest.py \
-	./protocols/FastFourwayProtocol.py \
 	./protocols/__init__.py \
 	./protocols/MultipleTryProtocol.py \
 	./statistics/__init__.py \
@@ -52,4 +51,3 @@ serialization_python_SCRIPTS = results_pb2.py
 # make rule for protoc
 results_pb2.py: util/serialization/results.proto
 	protoc --python_out=${builddir} -I${srcdir}/util/serialization $<
-	
