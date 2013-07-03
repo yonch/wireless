@@ -5,7 +5,10 @@
 #pragma once
 
 /**
- * Prunes choices using weights. With weights, smaller is better.
+ * \ingroup hmm
+ * \brief Interface for a class that prunes choices using weights.
+ *
+ * @note smaller is better.
  */
 template<typename LabelType, typename Weight>
 class IPruner {

@@ -11,7 +11,10 @@
 #include <stdint.h>
 
 /**
- * This should only contain static methods
+ * \ingroup util
+ * \brief Various bit, string and likelihood manipulation functions
+ *
+ * @note This class should only contain static methods
  **/
 class Utils
 {

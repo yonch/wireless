@@ -10,6 +10,10 @@
 using namespace std;
 
 /**
+ * \ingroup bp
+ * \brief Efficient memory heap for constant-sized memory if fine-grained deallocation is not
+ *     required.
+ *
  * A class that implements a special heap:
  *   - Only allocates one type of variable
  *   - Allocates a lot of elements at once from system heap to save on overhead

@@ -9,6 +9,9 @@
 #include <stdint.h>
 
 /**
+ * \ingroup puncturing
+ * \brief Gets symbols from index 0 to last index and wraps around
+ *
  * Chooses streams in order 0,1,2.. and wraps around when reaching the highest stream
  */
 class RoundRobinPuncturingSchedule : public IPuncturingSchedule {

@@ -8,6 +8,10 @@
 #include <stdint.h>
 
 /**
+ * \ingroup protocols
+ * \brief Attempts a sequence of rates, to find a rate up to (1+delta) factor from the minimal
+ *    possible rate for the channel
+ *
  * A protocol that tries rates such that the spacing between rates is at most
  * 	   a given constant factor 'delta'. This means that if a system achieves
  * 	   a rate R, then the protocol will at the worst case try rate R * delta.

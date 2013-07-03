@@ -7,7 +7,9 @@
 #include <complex>
 
 /**
- * Loads strider's 27x33 generator matrix into matrixG.
+ * \ingroup strider
+ * \brief Loads strider's 27x33 generator matrix.
+ *
  * @param outMatrixG: where values will be written
  * @param rowsG: must be 27
  * @param colsG: must be 33

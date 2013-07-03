@@ -10,7 +10,8 @@
 #include "../util/MTRand.h"
 
 /**
- * Generates fading coefficients for coherence-time based fading
+ * \ingroup channels
+ * \brief Generates fading coefficients for coherence-time based fading
  */
 class CoherenceCoeffGenerator {
 public:

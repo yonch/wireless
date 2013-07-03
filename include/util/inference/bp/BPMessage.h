@@ -4,6 +4,10 @@
  */
 #pragma once
 
+/**
+ * \ingroup bp
+ * \brief A belief propagation message
+ */
 struct BPMessage {
 public:
 	unsigned int from;

@@ -11,6 +11,9 @@
 #include "CoherenceFading.h"
 
 /**
+ * \ingroup channels
+ * \brief Model of Rayleigh channel fading; receiver has no knowledge of fading coefficients.
+ *
  * Adds noise with SNR like the CoherenceFading would do, but does not scale
  *     the symbol's magnitude, and does not include the fading strength info.
  */

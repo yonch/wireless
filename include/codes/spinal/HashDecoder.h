@@ -12,7 +12,8 @@
 #include "FlatSymbolStorage.h"
 
 /**
- * Holder for intermediate state, retrievable using getIntermediate()
+ * \ingroup spinal
+ * \brief Holder for intermediate state, retrievable using HashDecoder::getIntermediate()
  */
 struct SpinalIntermediateResult {
 	// The bits that were fed into the spine
@@ -25,7 +26,10 @@ struct SpinalIntermediateResult {
 	unsigned long long weight;
 };
 
-
+/**
+ * \ingroup spinal
+ * \brief Decoder for spinal codes
+ */
 template<typename Search>
 class HashDecoder : public IHashDecoder<typename Search::Evaluator::ChannelSymbol>
 {

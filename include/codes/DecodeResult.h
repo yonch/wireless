@@ -6,6 +6,10 @@
 
 #include <string>
 
+/**
+ * \ingroup codes
+ * \brief The result of a decode attempt
+ */
 struct DecodeResult {
 	DecodeResult(const std::string& _packet, float _logProbError)
 		: packet(_packet), logProbError(_logProbError) {}

@@ -7,6 +7,10 @@
 #include <vector>
 #include <string>
 
+/**
+ * \ingroup detectors
+ * \brief Determines whether packet was decoded successfully by comparing to ground truth
+ */
 template<typename DecodeResult>
 class OracleDetector {
 public:

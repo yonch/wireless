@@ -9,7 +9,8 @@
 #include "LookaheadAdaptor.h"
 
 /**
- * A beam search, with lookahead
+ * \ingroup hmm
+ * \brief A beam search, with lookahead
  */
 template<typename BranchEvaluator, template<class> class Pruner>
 class LookaheadBeamSearch {

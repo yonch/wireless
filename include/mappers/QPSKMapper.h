@@ -11,6 +11,10 @@
 #include "../CodeBench.h"
 #include "IMapper.h"
 
+/**
+ * \ingroup mappers
+ * \brief Maps bits to QPSK (using ITPP)
+ */
 class QPSKMapper : public IMapper<ComplexSymbol> {
 public:
 	/**

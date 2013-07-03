@@ -10,6 +10,9 @@
 using namespace std;
 
 /**
+ * \ingroup puncturing
+ * \brief Spinal protocol, transmits one pass after another
+ *
  * A sequential protocol transmits pass after another, until either maxPasses
  * 		is reached, or the code signals that the packet is complete (isFinished)
  */

@@ -13,7 +13,8 @@ using namespace std;
 
 
 /**
- * A stub of a decoder, for testing purposes. The inputs to the decode function
+ * \ingroup spinal
+ * \brief A stub of a decoder, for testing purposes. The inputs to the decode function
  * are saved and can be accessed.
  */
 class StubHashDecoder

@@ -12,7 +12,10 @@
 class IEncoder;
 typedef std::tr1::shared_ptr<IEncoder> IEncoderPtr;
 
-
+/**
+ * \ingroup codes
+ * \brief Interface of an encoder
+ */
 class IEncoder
 {
 public:

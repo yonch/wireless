@@ -9,6 +9,10 @@
 #include <tr1/memory>
 #include <vector>
 
+/**
+ * \ingroup mappers
+ * \brief Interface of a mapper
+ */
 template<typename ChannelSymbol>
 class IMapper {
 public:

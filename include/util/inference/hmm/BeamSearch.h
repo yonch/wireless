@@ -10,6 +10,10 @@
 #include "BestK.h"
 #include "DualPool.h"
 
+/**
+ * \ingroup hmm
+ * \brief Information about a node while exploring a tree.
+ */
 template<typename Node>
 struct SearchIntermediateResult {
 	// The bits that were fed into the spine
@@ -21,7 +25,8 @@ struct SearchIntermediateResult {
 
 
 /**
- * A generic implementation of beam search exploration.
+ * \ingroup hmm
+ * \brief A generic implementation of beam search exploration.
  *
  * The search starts from a root node. At each step, all nodes in the beam are
  *    branched with same number of children per node. Among the children, the

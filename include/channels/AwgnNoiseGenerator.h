@@ -6,7 +6,8 @@
 
 
 /**
- * Generic helper to add AWGN noise to symbols
+ * \ingroup channels
+ * \brief Generic helper to add AWGN noise to symbols
  */
 template<typename ChannelSymbol>
 class AwgnNoiseGenerator {

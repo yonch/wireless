@@ -11,6 +11,10 @@
 
 using std::vector;
 
+/**
+ * \ingroup channels
+ * \brief Simulates the Binary Symmetric Channel
+ */
 class BscChannel
 {
 public:

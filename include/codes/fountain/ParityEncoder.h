@@ -9,6 +9,10 @@
 
 #include "../../CodeBench.h"
 
+/**
+ * \ingroup fountain
+ * \brief Encodes graphical codes from specification of check nodes connectivity (used for LT)
+ */
 template<typename SymbolFunction, typename NeighborGenerator>
 class ParityEncoder
 {

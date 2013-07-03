@@ -12,6 +12,10 @@
 #include "BipartiteGraph.h"
 #include "NodeUpdater.h"
 
+/**
+ * \ingroup bp
+ * \brief Belief propagation implementation on Bipartite Graphs
+ */
 class BipartiteBP
 {
 public:

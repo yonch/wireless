@@ -9,6 +9,10 @@
 #include <stdint.h>
 #include <vector>
 
+/**
+ * \ingroup mappers
+ * \brief Maps integers to fixed-precision symbols
+ */
 class LinearMapper {
 public:
 	typedef std::tr1::shared_ptr<LinearMapper> Ptr;

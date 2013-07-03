@@ -10,6 +10,10 @@
 #include "../util/MTRand.h"
 #include "CoherenceCoeffGenerator.h"
 
+/**
+ * \ingroup channels
+ * \brief Model of Rayleigh channel fading; receiver knows exact fading coefficients.
+ */
 template<typename ChannelSymbol>
 class CoherenceFading {
 public:

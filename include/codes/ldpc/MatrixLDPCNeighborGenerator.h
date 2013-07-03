@@ -7,6 +7,10 @@
 #include "SparseMatrix.h"
 #include "MatrixLDPCCode.h"
 
+/**
+ * \ingroup ldpc
+ * \brief Outputs graphical structure of LDPC code, for belief propagation.
+ */
 class MatrixLDPCNeighborGenerator {
 public:
 	MatrixLDPCNeighborGenerator(const MatrixLDPCCode& code);

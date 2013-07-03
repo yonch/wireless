@@ -6,6 +6,10 @@
 
 #include "SparseMatrix.h"
 
+/**
+ * \ingroup ldpc
+ * \brief Specification of a Quasi-Cyclic LDPC code
+ */
 struct MatrixLDPCCode {
 	MatrixLDPCCode(unsigned int _n,
 	               unsigned int _Z,

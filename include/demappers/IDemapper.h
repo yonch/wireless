@@ -8,6 +8,10 @@
 #include <vector>
 #include <tr1/memory>
 
+/**
+ * \ingroup demappers
+ * \brief Interface for a demapper
+ */
 template<typename ChannelSymbol>
 class IDemapper {
 public:

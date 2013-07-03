@@ -5,6 +5,9 @@
 #pragma once
 
 /**
+ * \ingroup hmm
+ * \brief A list with element weights where at most K minimal weight elements are maintained.
+ *
  * The BestK class is a datastructure, that keeps at most K elements, that have
  *    minimal weight of the ones that were added.
  *

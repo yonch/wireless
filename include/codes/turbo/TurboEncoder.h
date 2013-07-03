@@ -12,6 +12,10 @@
 
 #include "../IEncoder.h"
 
+/**
+ * \ingroup turbo
+ * \brief Turbo encoder
+ */
 class TurboEncoder : public IEncoder
 {
 public:

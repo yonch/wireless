@@ -9,7 +9,8 @@
 #include <vector>
 
 /**
- * The BitStatCounter class counts statistics of k-bit blocks in a series of strings.
+ * \ingroup util
+ * \brief Counts statistics of k-bit blocks in a series of strings.
  *
  * The user processes multiple strings, then queries for different blocks i how many times block i
  *     was != 0.

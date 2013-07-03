@@ -11,6 +11,10 @@
 #include "../CodeBench.h"
 #include "DecodeResult.h"
 
+/**
+ * \ingroup codes
+ * \brief Interface for a decoder
+ */
 template<typename ChannelSymbol>
 class IDecoder {
 public:

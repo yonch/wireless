@@ -6,5 +6,9 @@
 
 #include <stdint.h>
 
+/**
+ * \ingroup strider
+ * \brief Default strider interleaving sequence
+ */
 extern uint16_t striderInterleaver[];
 

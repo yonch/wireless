@@ -10,6 +10,10 @@
 #include "../IEncoder.h"
 #include "LayerSuperposition.h"
 
+/**
+ * \ingroup strider
+ * \brief Strider encoder
+ */
 class LayeredEncoder {
 public:
 	typedef std::tr1::shared_ptr<LayeredEncoder> Ptr;

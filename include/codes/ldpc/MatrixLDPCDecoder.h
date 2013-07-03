@@ -14,6 +14,10 @@
 
 using namespace std;
 
+/**
+ * \ingroup ldpc
+ * \brief Decoder for Quasi-Cyclic LDPC codes
+ */
 class MatrixLDPCDecoder
 {
 public:

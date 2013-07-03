@@ -5,7 +5,8 @@
 #pragma once
 
 /**
- * Easy wrapping for any hash function
+ * \ingroup hashes
+ * \brief Python wrapper for hash functions
  */
 template<typename HashFunctionT>
 class SWIGHash {

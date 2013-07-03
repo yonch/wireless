@@ -13,6 +13,9 @@
 #include <assert.h>
 
 /**
+ * \ingroup bp
+ * \brief A container for multiple fixed-size vectors in a memory-efficient block.
+ *
  * The MultiVector class keeps many virtual vectors in a contiguous memory block.
  *  * virtual vector lengths are given at construction time, and remain constant
  *    throughout the life of the MultiVector.

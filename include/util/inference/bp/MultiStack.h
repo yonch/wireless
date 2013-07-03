@@ -8,6 +8,11 @@
 #include <stdexcept>
 #include "ElementHeap.h"
 
+/**
+ * \ingroup bp
+ * \brief A low-overhead implementation of multiple stacks. Uses ElementHeap for cheap memory
+ *     allocation.
+ */
 template<class T>
 class MultiStack
 {

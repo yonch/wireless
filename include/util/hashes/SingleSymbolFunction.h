@@ -8,9 +8,8 @@
 #include <stdint.h>
 
 /**
- * SingleSymbolFunction
- *
- * Extracts a single symbol from the underlying hash
+ * \ingroup hashes
+ * \brief Extracts a single symbol from the underlying hash digest
  */
 template<typename HashFunctionT>
 class SingleSymbolFunction{

@@ -23,6 +23,10 @@ public:
 	static Digest digest(const State& state);
 };
 
+/**
+ * \ingroup hashes
+ * \brief Produces symbols from the digest of a SalsaHash
+ */
 class SalsaSymbolFunction{
 public:
 	typedef SalsaHash Hash;

@@ -10,7 +10,8 @@
 using namespace std;
 
 /**
- * A protocol suited for StridedPuncturingSchedule.
+ * \ingroup protocols
+ * \brief Spinal protocol, suited for StridedPuncturingSchedule ("8-way puncturing").
  *
  * This protocol attempts to decode every time the StridedPuncturingSchedule
  *    finishes emitting a stride, and stops when reaching a maximum number

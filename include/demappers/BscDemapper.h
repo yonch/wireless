@@ -7,6 +7,10 @@
 #include "../CodeBench.h"
 #include <vector>
 
+/**
+ * \ingroup demappers
+ * \brief Produces LLRs from bits distorted by the Binary Symmetric Channel
+ */
 class BscDemapper {
 public:
 	typedef float OutputType;

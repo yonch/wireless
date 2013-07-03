@@ -10,6 +10,10 @@
 #include <tr1/memory>
 #include "IDecoder.h"
 
+/**
+ * \ingroup codes
+ * \brief Interface for decoders for punctured codes
+ */
 template<typename ChannelSymbol>
 class IMultiStreamDecoder {
 public:

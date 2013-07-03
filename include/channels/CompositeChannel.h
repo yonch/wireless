@@ -11,7 +11,8 @@
 #include "../util/MTRand.h"
 
 /**
- * Concatenates two channels, to make a new channel
+ * \ingroup channels
+ * \brief Concatenates two channels, to make a new channel
  */
 template<typename Channel1, typename Channel2>
 class CompositeChannel

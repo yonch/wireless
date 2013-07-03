@@ -11,6 +11,9 @@
 #include "../CodeBench.h"
 
 /**
+ * \ingroup codes
+ * \brief Interface for puncture-able encoders
+ *
  * The IMultiStreamEncoder interface is suitable for codes where values can be generated from
  *     different "locations" or "streams". These kind of encoders can be punctured easily, by
  *     requesting outputs from specific streams.

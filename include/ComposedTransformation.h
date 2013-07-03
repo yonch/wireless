@@ -6,6 +6,10 @@
 
 #include <stdint.h>
 
+/**
+ * \ingroup util
+ * \brief Composes two transformations into one transform.
+ */
 template<typename Transform1, typename Transform2>
 class ComposedTransformation2 {
 public:

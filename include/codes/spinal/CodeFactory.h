@@ -15,12 +15,16 @@
 class IEncoderFactory;
 template<typename ChannelSymbol> class ISearchFactory;
 
-// Smart pointer typedefs
+/// Smart pointer typedefs
 typedef std::tr1::shared_ptr<IEncoderFactory> IEncoderFactoryPtr;
 typedef std::tr1::shared_ptr<ISearchFactory<Symbol> > ISymbolSearchFactoryPtr;
 typedef std::tr1::shared_ptr<ISearchFactory<SoftSymbol > > ISoftSearchFactoryPtr;
 typedef std::tr1::shared_ptr<ISearchFactory<FadingSymbol > > IFadingSearchFactoryPtr;
 
+/**
+ * \ingroup spinal
+ * \brief Main factory for spinal encoders and decoders
+ */
 class CodeFactory {
 public:
 	CodeFactory(unsigned int k,
@@ -35,7 +39,10 @@ private:
 	unsigned int m_spineLength;
 };
 
-
+/**
+ * \ingroup spinal
+ * \brief Intermediate spinal factory: returned from CodeFactory
+ */
 class IEncoderFactory {
 public:
 	virtual ~IEncoderFactory() {}
@@ -51,6 +58,10 @@ public:
 	virtual IFadingSearchFactoryPtr coherence(unsigned int premapperNumBits) = 0;
 };
 
+/**
+ * \ingroup spinal
+ * \brief Intermediate spinal factory: returned from EncoderFactory
+ */
 template<typename ChannelSymbol>
 class ISearchFactory {
 public:

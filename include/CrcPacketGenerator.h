@@ -12,7 +12,10 @@
 using std::string;
 using std::vector;
 
-
+/**
+ * \ingroup packetgen
+ * \brief Generates packets with CRC32
+ */
 class CrcPacketGenerator
 {
 public:

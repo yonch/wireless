@@ -9,7 +9,8 @@
 #include <vector>
 
 /**
- * The BitStatCounter class counts statistics of individual bits in a series of strings.
+ * \ingroup util
+ * \brief Counts statistics of individual bits in a series of strings.
  *
  * The user processes multiple strings, then queries for different bits i how many times bit i was 1.
  */

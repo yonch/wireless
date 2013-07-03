@@ -5,6 +5,9 @@
 #pragma once
 
 /**
+ * \ingroup mappers
+ * \brief Helper functions to compute Normal Distribution.
+ *
  * Numerical calculations of properties of the normal distribution.
  *
  * Implementation from http://home.online.no/~pjacklam/notes/invnorm/

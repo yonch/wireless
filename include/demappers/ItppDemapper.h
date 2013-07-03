@@ -14,7 +14,8 @@
 
 
 /**
- * An adaptor between IT++ Modulator and our IDemapper interface
+ * \ingroup demappers
+ * \brief An adaptor between IT++ Modulator and our IDemapper interface
  */
 template<typename ChannelSymbol>
 class ItppDemapper : public IDemapper<ChannelSymbol> {

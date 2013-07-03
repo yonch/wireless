@@ -68,6 +68,10 @@
 #include <cmath>
 #include <vector>
 
+/**
+ * \ingroup util
+ * \brief Mersenne Twister random number generator, with support for Normal random variables
+ */
 class MTRand {
 // Data
 public:

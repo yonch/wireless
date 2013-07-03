@@ -9,6 +9,11 @@
 
 #include "../../CodeBench.h"
 
+/**
+ * \ingroup strider
+ * \brief Extracts estimates to original layers given linear combinations of layers and generator
+ * matrix.
+ */
 class LayerManipulator {
 public:
 	typedef boost::numeric::ublas::matrix<ComplexSymbol,

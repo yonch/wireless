@@ -9,6 +9,10 @@
 
 #include "../../CodeBench.h"
 
+/**
+ * \ingroup strider
+ * \brief Composes linear combinations of layers using a given matrix, to produce symbols
+ */
 class LayerSuperposition {
 public:
 	/**

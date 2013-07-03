@@ -7,6 +7,10 @@
 #include "../IEncoder.h"
 #include "../ILLRDecoder.h"
 
+/**
+ * \ingroup strider
+ * \brief Factory for turbo encoder and decoder used internally within Strider
+ */
 class StriderTurboCode {
 public:
 	/**

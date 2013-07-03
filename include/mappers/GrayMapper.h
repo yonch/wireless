@@ -8,6 +8,10 @@
 #include <stdint.h>
 #include <vector>
 
+/**
+ * \ingroup mappers
+ * \brief Maps a bit sequence to a constellation point using a Gray code.
+ */
 class GrayMapper {
 public:
 	typedef uint16_t InputType;

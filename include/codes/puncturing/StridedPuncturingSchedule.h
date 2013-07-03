@@ -12,6 +12,9 @@
 class StridedProtocol;
 
 /**
+ * \ingroup puncturing
+ * \brief Splits the symbols stream to 8 sub-groups, then sends symbols from each sub-group
+ *
  * We try to puncture evenly, so that there isn't a stream that is left
  * 		behind. The last stream is a special case because in spinal decoding, the
  * 		errors concentrate in the last few bits. In order to make sure the

@@ -13,6 +13,10 @@
 #include "../ILLRDecoder.h"
 #include "../InterleavedDecoder.h"
 
+/**
+ * \ingroup turbo
+ * \brief Turbo decoder
+ */
 class TurboDecoder : public ILLRDecoder {
 public:
 	TurboDecoder(uint32_t messageLength);

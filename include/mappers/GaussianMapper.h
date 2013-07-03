@@ -8,6 +8,10 @@
 #include <vector>
 #include "../CodeBench.h"
 
+/**
+ * \ingroup mappers
+ * \brief Maps integers to symbols distributed like a truncated Gaussian
+ */
 class GaussianMapper {
 public:
 	typedef uint16_t InputType;

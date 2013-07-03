@@ -8,6 +8,10 @@
 #include <itpp/base/vec.h>
 #include <stdint.h>
 
+/**
+ * \ingroup util
+ * \brief Conversion utils to/from IT++ vectors
+ */
 class ItppUtils {
 public:
 	/**

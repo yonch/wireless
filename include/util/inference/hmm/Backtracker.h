@@ -8,6 +8,10 @@
 #include <algorithm>
 
 /**
+ * \ingroup hmm
+ * \brief Keeps information about edges explored in a tree, so a path from an explored node to the
+ *    root can be extracted.
+ *
  * The Backtracker class saves backtracking information from a branching process
  *    and in the end retrieves the path a specific leaf in the last layer took
  *    to get to where it is.

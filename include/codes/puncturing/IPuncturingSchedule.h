@@ -15,6 +15,9 @@ class IPuncturingSchedule;
 typedef std::tr1::shared_ptr<IPuncturingSchedule> IPuncturingSchedulePtr;
 
 /**
+ * \ingroup puncturing
+ * \brief Interface for classes that specify puncturing schedules
+ *
  * The IPuncturingSchedule specifies what sequence of streams of an IMultiStreamEncoder is used
  *     to produce a codeword.
  */

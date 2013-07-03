@@ -8,7 +8,9 @@
 #include "MultiVector.h"
 
 /**
- * Node updater interface.
+ * \ingroup bp
+ * \brief Interface for classes that send out messages given incoming messages
+ *
  * The node updater receives messages in a MultiVector, and replies in that
  *    same MultiVector. Each virtual vector represents messages incoming to a
  *    node, and each element in that vector is an edge incident to that node.

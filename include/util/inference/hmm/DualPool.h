@@ -5,6 +5,9 @@
 #pragma once
 
 /**
+ * \ingroup hmm
+ * \brief Dual-buffered memory staging area (supports access to memory and 'flip').
+ *
  * A DualPool keeps two pools of 'size' instances. It supports accessing these
  *     two pools, 'primary' and 'secondary' by index, and a special operation
  *     'flip', causes the access to switch: primary becomes secondary and vice

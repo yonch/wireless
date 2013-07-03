@@ -8,7 +8,8 @@
 #include "IPuncturingSchedule.h"
 
 /**
- * Repeats each stream index of another puncturing schedule several (numRepetitions) times
+ * \ingroup puncturing
+ * \brief Repeats each stream index of another puncturing schedule several (numRepetitions) times
  */
 class RepeatingPuncturingSchedule : public IPuncturingSchedule
 {

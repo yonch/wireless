@@ -12,6 +12,9 @@
 #include "IEncoder.h"
 
 /**
+ * \ingroup codes
+ * \brief Divides message to different encoders, then round-robins for symbols from these encoders.
+ *
  * The EncoderMultiplexer class is given several different encoders. A given
  * 		message is divided into sub-messages and these sub-messages are passed
  * 		on to individual encoders. When symbols are produced, the different

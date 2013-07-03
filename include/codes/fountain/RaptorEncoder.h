@@ -13,6 +13,11 @@
 #include "LTParityNeighborGenerator.h"
 #include "../../CodeBench.h"
 
+
+/**
+ * \ingroup fountain
+ * \brief Encoder for Raptor codes
+ */
 class RaptorEncoder
 {
 public:

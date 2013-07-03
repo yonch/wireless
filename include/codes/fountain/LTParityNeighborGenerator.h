@@ -8,6 +8,10 @@
 
 #define DIST_TABLE_SIZE 7
 
+/**
+ * \ingroup fountain
+ * \brief Generates LT node distribution and selects which bits are XOR'd
+ */
 class LTParityNeighborGenerator
 {
 public:

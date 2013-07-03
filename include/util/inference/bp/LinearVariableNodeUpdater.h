@@ -10,6 +10,10 @@
 #include "MultiVector.h"
 #include "BipartiteBP.h"
 
+/**
+ * \ingroup bp
+ * \brief Sends outgoing messages from variable nodes given incoming messages, for linear codes
+ */
 class LinearVariableNodeUpdater : public VariableNodeUpdater<BipartiteBP::QLLR> {
 public:
 	/**

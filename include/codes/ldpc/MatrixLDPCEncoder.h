@@ -11,6 +11,8 @@
 #include "WordWidthTransformer.h"
 
 /**
+ * \ingroup ldpc
+ * \brief Encoder for Quasi-Cyclic LDPC codes
  * Matrix LDPC Encoder, like the one specified in 802.11n-2009 standard (section
  * 		20.3.11.6.4	and Annex R)
  */

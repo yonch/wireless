@@ -8,7 +8,9 @@
 #include "UnlimitedHash.h"
 
 /**
- * Implementation of Bob Jenkin's One-At-A-Time hash function.
+ * \ingroup hashes
+ * \brief Implementation of Bob Jenkin's One-At-A-Time hash function.
+ *
  * 		code and discussion at:
  * 			http://www.burtleburtle.net/bob/hash/doobs.html
  */
@@ -27,7 +29,12 @@ public:
 	static Digest digest(const State& state);
 };
 
-// Note: one at a time hash produces one symbol per hash application.
+/**
+ * \ingroup hashes
+ * \brief Produces symbols from the digest of a SalsaHash
+ *
+ * @Note: one at a time hash produces one symbol per hash application.
+ */
 typedef SingleSymbolFunction<OneAtATimeHash> OneAtATimeSymbolFunction;
 
 typedef UnlimitedHash<OneAtATimeSymbolFunction> OneAtATimeUnlimitedHash;

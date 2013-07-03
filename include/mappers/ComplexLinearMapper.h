@@ -8,6 +8,10 @@
 #include <stdint.h>
 #include <vector>
 
+/**
+ * \ingroup mappers
+ * \brief Maps integers to complex numbers
+ */
 class ComplexLinearMapper {
 public:
 	typedef uint16_t InputType;

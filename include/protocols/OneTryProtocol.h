@@ -10,8 +10,8 @@
 using namespace std;
 
 /**
- * The one-try protocol transmits exactly a single burst, of numSymbols
- * 		symbols.
+ * \ingroup protocols
+ * \brief Transmits exactly a single burst of symbols, numSymbols symbols long.
  */
 class OneTryProtocol {
 public:

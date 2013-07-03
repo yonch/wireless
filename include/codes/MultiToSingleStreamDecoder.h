@@ -13,7 +13,11 @@
 #include "IMultiStreamDecoder.h"
 
 
-
+/**
+ * \ingroup codes
+ * \brief Decodes a punctured code by rearranging received symbols according to where they were
+ *   generated
+ */
 template<typename ChannelSymbol>
 class MultiToSingleStreamDecoder : public IDecoder<ChannelSymbol> {
 public:

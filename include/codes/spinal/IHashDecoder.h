@@ -10,6 +10,10 @@
 #include <tr1/memory>
 #include "../IMultiStreamDecoder.h"
 
+/**
+ * \ingroup spinal
+ * \brief Result of a spinal decode attempt
+ */
 struct SpinalDecodeResult : public DecodeResult {
 	SpinalDecodeResult(const std::string& _packet, float _logProbError)
 		: DecodeResult(_packet,_logProbError) {}
@@ -26,7 +30,10 @@ struct SpinalDecodeResult : public DecodeResult {
 	std::vector<float> weights;
 };
 
-
+/**
+ * \ingroup spinal
+ * \brief Decoder for spinal codes.
+ */
 template<typename ChannelSymbol>
 class IHashDecoder : public IMultiStreamDecoder<ChannelSymbol> {
 public:

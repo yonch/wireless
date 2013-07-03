@@ -11,9 +11,9 @@
 #include "IEncoder.h"
 
 /**
- * An encoder that encodes using a given encoder, and then shuffles the
- * 	   output symbols according to a given mapping
- *
+ * \ingroup codes
+ * \brief An encoder that encodes using a specified encoder, and then shuffles the
+ * 	   output symbols according to the given permutation
  */
 class InterleavedEncoder : public IEncoder
 {

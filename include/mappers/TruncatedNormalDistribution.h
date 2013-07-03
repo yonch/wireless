@@ -5,6 +5,9 @@
 #pragma once
 
 /**
+ * \ingroup mappers
+ * \brief Produces a elements from gaussian distribution, limited to a range (a,b).
+ *
  * Calculates values associated with the Truncated Normal Distribution,
  * 		see http://en.wikipedia.org/wiki/Truncated_normal_distribution
  *

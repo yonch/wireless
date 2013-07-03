@@ -8,7 +8,8 @@
 #include <stdint.h>
 
 /**
- * A decoder that simply hard-decodes its given LLRs
+ * \ingroup codes
+ * \brief A decoder that simply hard-decodes its given LLRs
  */
 class NullDecoder: public ILLRDecoder {
 public:

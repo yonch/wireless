@@ -9,7 +9,9 @@
 #include "UnlimitedHash.h"
 
 /**
- * Implementation of Bob Jenkin's lookup3 hash function.
+ * \ingroup hashes
+ * \brief Implementation of Bob Jenkin's lookup3 hash function.
+ *
  * 		Source code partially derived from:
  * 			http://www.burtleburtle.net/bob/c/lookup3.c
  */
@@ -30,6 +32,10 @@ public:
 	static uint64_t digest_extended(const State& state);
 };
 
+/**
+ * \ingroup hashes
+ * \brief Produces symbols from the digest of a Lookup3Hash
+ */
 class Lookup3SymbolFunction{
 public:
 	typedef Lookup3Hash Hash;

@@ -9,6 +9,9 @@
 #include "IPuncturingSchedule.h"
 
 /**
+ * \ingroup puncturing
+ * \brief Punctures according to a given vector
+ *
  * Instances are given a vector with the puncturing schedule they provide.
  *
  * There is support for changing the schedule while running.

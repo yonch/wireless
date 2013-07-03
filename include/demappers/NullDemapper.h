@@ -8,6 +8,10 @@
 #include <vector>
 using namespace std;
 
+/**
+ * \ingroup demappers
+ * \brief Performs no transformation on the symbols
+ */
 class NullDemapper {
 public:
 	typedef Symbol OutputType;

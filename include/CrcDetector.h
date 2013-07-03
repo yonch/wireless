@@ -8,6 +8,10 @@
 #include <string>
 #include "util/Utils.h"
 
+/**
+ * \ingroup detectors
+ * \brief Detects whether the packet's CRC checks out
+ */
 template<typename DecodeResult>
 class CrcDetector {
 public:

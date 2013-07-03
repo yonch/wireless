@@ -9,7 +9,8 @@
 using namespace std;
 
 /**
- * A hash function that produces a pseudo-random stream of 16-bit values.
+ * \ingroup hashes
+ * \brief A hash function that produces a pseudo-random stream of 16-bit values.
  *
  * The stream of 16-bit values is produced by iteratively calling nextBits().
  *

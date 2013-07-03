@@ -15,6 +15,9 @@
 #include "../demappers/IDemapper.h"
 
 /**
+ * \ingroup codes
+ * \brief Composes a demapper with an LLR decoder.
+ *
  * Implements a symbol decoder that handles symbols by demapping them using a
  *     given demapper and then passes them on to an ILLRDecoder
  */

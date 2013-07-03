@@ -5,7 +5,8 @@
 #pragma once
 
 /**
- * An adaptor class to lower the cost of updates bit-by-bit.
+ * \ingroup hashes
+ * \brief An adaptor class that allows updates bit-by-bit, then hashes the entire state.
  *
  * Initialization keeps the initialized state until digestion, and
  * 	 inits internal state to 0.
@@ -32,6 +33,10 @@ public:
 	static Digest digest(const State& state);
 };
 
+/**
+ * \ingroup hashes
+ * \brief Produces symbols from the digest of a ShiftRegisterAdaptorHash
+ */
 template<typename HashFunctionT>
 class ShiftRegisterAdaptorSymbolFunction {
 public:

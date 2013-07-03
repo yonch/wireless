@@ -7,7 +7,8 @@
 #include <stdint.h>
 
 /**
- * Stores symbols indexed by spine value
+ * \ingroup spinal
+ * \brief Stores symbols indexed by spine value
  */
 template<typename ChannelSymbol>
 class FlatSymbolStorage {

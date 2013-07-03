@@ -7,6 +7,9 @@
 #include <stdint.h>
 
 /**
+ * \ingroup util
+ * \brief Adapts classes with process() method to transform() method
+ *
  * Adapts a Processor instance (that has method process(in,out)) to a
  * 	   transformation instance (with method transform(in, observed, out))
  *

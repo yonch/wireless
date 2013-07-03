@@ -8,7 +8,8 @@
 #include <stdint.h>
 
 /**
- * An encoder that does not modify the input bits to the output.
+ * \ingroup codes
+ * \brief An encoder that does not modify the input bits to the output.
  *  Each input bit is copied to an output symbol
  */
 class NullEncoder: public IEncoder {

@@ -14,6 +14,10 @@
 #include "../../mappers/IMapper.h"
 #include "LayerManipulator.h"
 
+/**
+ * \ingroup strider
+ * \brief Strider decoder
+ */
 template<typename ChannelSymbol>
 class LayeredDecoder : public IDecoder<ChannelSymbol> {
 public:

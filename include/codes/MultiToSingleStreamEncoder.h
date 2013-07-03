@@ -11,7 +11,10 @@
 #include "IMultiStreamEncoder.h"
 #include "puncturing/IPuncturingSchedule.h"
 
-
+/**
+ * \ingroup codes
+ * \brief Punctures a puncture-able code, can produce a stream of symbols.
+ */
 class MultiToSingleStreamEncoder : public IEncoder {
 public:
 	MultiToSingleStreamEncoder(IMultiStreamEncoder::Ptr& encoder,

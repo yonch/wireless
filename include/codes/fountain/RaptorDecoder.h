@@ -13,6 +13,10 @@
 #include "../ILLRDecoder.h"
 #include "LTDecoder.h"
 
+/**
+ * \ingroup fountain
+ * \brief Decoder for Raptor codes
+ */
 class RaptorDecoder : public ILLRDecoder {
 public:
 	/**

@@ -9,6 +9,8 @@
 #include "../../CodeBench.h"
 
 /**
+ * \ingroup ldpc
+ * \brief Changes memory representation from k_1-bit blocks to k_2-bit blocks
  * Converts a stream of bits from one grouping to another (ie 6-bit words stored
  * 		in uchar to 61-bit words stored in uint64)
  *

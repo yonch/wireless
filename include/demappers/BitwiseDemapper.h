@@ -15,7 +15,11 @@ class GrayMapper;
 // typedefs
 typedef BitwiseDemapper<GrayMapper> GrayDemapper;
 
-
+/**
+ * \ingroup demappers
+ * \brief Demaps constellation maps by enumerating on all constellation points, computing each
+ *    one's likelihood.
+ */
 template<typename Mapper>
 class BitwiseDemapper {
 public:

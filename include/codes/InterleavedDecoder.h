@@ -9,6 +9,10 @@
 
 #include "IDecoder.h"
 
+/**
+ * \ingroup codes
+ * \brief Decodes an interleaved code: de-interleaves, then decodes.
+ */
 template<typename Decoder>
 class InterleavedDecoder : public ILLRDecoder {
 public:

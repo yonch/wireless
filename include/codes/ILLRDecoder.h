@@ -10,6 +10,10 @@
 #include "../CodeBench.h"
 #include "DecodeResult.h"
 
+/**
+ * \ingroup codes
+ * \brief A decoder that uses Log Likelihood Ratio estimates of bits as its information
+ */
 class ILLRDecoder {
 public:
 	typedef DecodeResult Result;

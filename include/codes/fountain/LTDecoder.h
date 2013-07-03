@@ -11,6 +11,10 @@
 #include "../ILLRDecoder.h"
 #include "LTParityNeighborGenerator.h"
 
+/**
+ * \ingroup fountain
+ * \brief Decoder for LT codes
+ */
 class LTDecoder : public ILLRDecoder {
 public:
 	/**

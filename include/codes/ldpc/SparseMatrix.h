@@ -13,6 +13,9 @@ template<typename ValueType> class SparseMatrix;
 typedef SparseMatrix<unsigned char> UcharSparseMatrix;
 
 /**
+ * \ingroup ldpc
+ * \brief Sparse matrix representation
+ *
  * Sparse matrix representation, in something like "compressed row storage" as
  * 		defined in sparselib++ (http://math.nist.gov/sparselib++/, section 2.3
  * 		of v1.5 documentation, April 1996)

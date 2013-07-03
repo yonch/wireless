@@ -9,6 +9,10 @@
 #include "../../CodeBench.h"
 #include "../IMultiStreamEncoder.h"
 
+/**
+ * \ingroup spinal
+ * \brief Spinal encoder
+ */
 template<typename SpineValueType>
 class HashEncoder : public IMultiStreamEncoder
 {

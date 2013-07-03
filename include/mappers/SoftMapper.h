@@ -8,6 +8,10 @@
 #include <stdint.h>
 #include <vector>
 
+/**
+ * \ingroup mappers
+ * \brief Maps several bits of an integer to a float
+ */
 class SoftMapper {
 public:
 	typedef uint16_t InputType;

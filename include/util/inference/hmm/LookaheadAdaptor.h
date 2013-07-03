@@ -6,6 +6,11 @@
 
 #include <vector>
 
+/**
+ * \ingroup hmm
+ * \brief A branching process that looks ahead a few layers in the tree when estimating node
+ *     likelihoods.
+ */
 template<typename BranchEvaluator>
 class LookaheadAdaptor {
 public:

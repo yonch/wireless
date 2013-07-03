@@ -7,6 +7,10 @@
 #include "LayeredEncoder.h"
 #include "../IDecoder.h"
 
+/**
+ * \ingroup strider
+ * \brief Factory for strider encoders and decoders
+ */
 class StriderFactory {
 public:
 	/**

@@ -11,6 +11,10 @@
 #include "../CodeBench.h"
 #include "IMapper.h"
 
+/**
+ * \ingroup mappers
+ * \brief Maps bits to arbitrary QAM-2^k (using ITPP)
+ */
 class QamMapper : public IMapper<ComplexSymbol> {
 public:
 	/**

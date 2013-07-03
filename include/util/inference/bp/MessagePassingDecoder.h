@@ -11,6 +11,10 @@
 #include "MultiStack.h"
 #include "BPMessage.h"
 
+/**
+ * \ingroup bp
+ * \brief Decoder using belief propagation on bipartite graphs
+ */
 template<typename CheckNodeUpdater, typename NeighborGenerator>
 class MessagePassingDecoder
 {

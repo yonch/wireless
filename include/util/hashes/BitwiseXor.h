@@ -7,7 +7,8 @@
 #include "SingleSymbolFunction.h"
 
 /**
- * Implementation of a simple bitwise XOR of uint32
+ * \ingroup hashes
+ * \brief Implementation of a simple bitwise XOR of uint32
  */
 class BitwiseXor {
 public:
@@ -24,5 +25,9 @@ public:
 	static Digest digest(const State& state);
 };
 
+/**
+ * \ingroup hashes
+ * \brief Produces symbols from the digest of a BitwiseXor
+ */
 typedef SingleSymbolFunction<BitwiseXor> BitwiseXorSymbolFunction;
 

@@ -7,6 +7,9 @@
 #include <stdint.h>
 
 /**
+ * \ingroup hmm
+ * \brief Collection of several BestK lists, insertions round-robin within the collection.
+ *
  * The ParallelBestK class implements multiple BestK instances in parallel:
  *    There are multiple lists, each containing at most K elements. New items
  *    into the ParallelBestK instance arrive to a list in a round robin fashion.

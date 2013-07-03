@@ -17,6 +17,10 @@
 #include <itpp/comm/ldpc.h>
 #endif
 
+/**
+ * \ingroup bp
+ * \brief Representation of a bipartite graph, with support for message passing on edges.
+ */
 template<typename T>
 class BipartiteGraph {
 public:

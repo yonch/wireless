@@ -11,6 +11,8 @@
 
 
 /**
+ * \ingroup ldpc
+ * \brief Computes messages from check nodes in belief propagation of linear codes
  * A check node updater that uses a table lookup on quantized LLR values, to
  *    compute messages from check nodes to variable nodes.
  * @see itpp::LLR_calc_unit for further details

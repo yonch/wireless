@@ -10,6 +10,10 @@
 
 using namespace std;
 
+/**
+ * \ingroup channels
+ * \brief Simulates the Additive White Gaussian Channel
+ */
 template<typename ChannelSymbol>
 class AwgnChannel
 {

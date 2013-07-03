@@ -6,6 +6,10 @@
 
 #include "../util/MTRand.h"
 
+/**
+ * \ingroup codes
+ * \brief Generates pseudo-random permutation (given a seed)
+ */
 class RandomPermutationGenerator {
 public:
 	enum {SEED_SIZE_UINTS = 4};

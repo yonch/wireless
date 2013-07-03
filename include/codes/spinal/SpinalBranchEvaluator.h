@@ -11,7 +11,8 @@
 
 
 /**
- * Computes the euclidian distance between two integer symbols
+ * \ingroup spinal
+ * \brief Computes the euclidian distance between two integer symbols
  */
 class IntegerEuclidianDistance {
 public:
@@ -20,7 +21,8 @@ public:
 };
 
 /**
- * Computes the euclidian distance between two soft numbers
+ * \ingroup spinal
+ * \brief Computes the euclidian distance between two soft numbers
  */
 class SoftEuclidianDistance {
 public:
@@ -30,7 +32,8 @@ public:
 
 
 /**
- * Computes the hamming distance between two symbols (that are integers)
+ * \ingroup spinal
+ * \brief Computes the hamming distance between two symbols (that are integers)
  */
 class HammingDistance {
 public:
@@ -39,7 +42,8 @@ public:
 };
 
 /**
- * Computes the euclidian distance between two faded soft symbols
+ * \ingroup spinal
+ * \brief Computes the euclidian distance between two faded soft symbols
  */
 class FadingEuclidianDistance {
 public:
@@ -48,7 +52,8 @@ public:
 };
 
 /**
- * The Node struct keeps information on one node in the explored tree
+ * \ingroup spinal
+ * \brief The Node struct keeps information on one node in the explored tree
  */
 template<typename SpineValueSeed, typename WeightType>
 struct SpinalNode {
@@ -69,6 +74,10 @@ struct SpinalNode {
 	SpineValueSeed hash;
 };
 
+/**
+ * \ingroup spinal
+ * \brief A container for a group of symbols
+ */
 template<typename ChannelSymbol>
 struct SymbolCollection {
 	// C'tor
@@ -83,6 +92,10 @@ struct SymbolCollection {
 };
 
 
+/**
+ * \ingroup spinal
+ * \brief Evaluates likelihoods of branches in the decoding tree
+ */
 template<typename SpineValueType, typename ChannelTransformation, typename Distance>
 class SpinalBranchEvaluator {
 public:

@@ -6,6 +6,10 @@
 
 #include <itpp/itbase.h>
 
+/**
+ * \ingroup turbo
+ * \brief Factory for bit-interleavings for turbo
+ */
 class TurboCodec {
 public:
 	/**

@@ -12,7 +12,10 @@
 using std::string;
 using std::vector;
 
-
+/**
+ * \ingroup packetgen
+ * \brief Generates random packets
+ */
 class PacketGenerator
 {
 public:
