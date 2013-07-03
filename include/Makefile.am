@@ -144,7 +144,6 @@ nobase_dist_pkginclude_HEADERS = \
 	./util/inference/hmm/LookaheadAdaptor.h \
 	./util/inference/hmm/LookaheadBeamSearch.h \
 	./util/inference/hmm/ParallelBestK.h \
-	./util/inference/hmm/PrunedBFS.h \
 	./util/ItppUtils.h \
 	./util/MTRand.h \
 	./util/BitStatCounter.h \
