@@ -3,7 +3,9 @@
 from Hash import hash_func
 from RNG import RNG
 
-
+##
+# \ingroup spinal_reference
+# \brief Spinal encoder
 class Encoder(object):
     """
     Spinal encoder.

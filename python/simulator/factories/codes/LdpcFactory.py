@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief LDPC factory 
 class LdpcFactory(object):
     @staticmethod
     def make_encoder(codeSpec, packetLength):

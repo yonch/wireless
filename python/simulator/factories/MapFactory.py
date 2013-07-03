@@ -3,6 +3,9 @@
 
 import wireless
 
+##
+# \ingroup factories
+# \brief Mappers factory 
 class MapFactory(object):
     def make_mapper(self, spec):
         if spec['type'] == 'linear':

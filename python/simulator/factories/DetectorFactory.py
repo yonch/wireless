@@ -3,6 +3,9 @@
 
 import wireless
 
+##
+# \ingroup factories
+# \brief Detectors factory
 class DetectorFactory(object):
     def make_detector(self, detectorSpec, codeSpec, packetLength, avgPower):
         if detectorSpec['type'] == 'oracle':

@@ -5,6 +5,9 @@ import numpy
 import wireless
 import struct
 
+##
+# \ingroup statistics
+# \brief Collected statistics on bit-index of first bit error 
 class FirstErrorStatisticsResult(object):
     """
     A result object for the FirstErrorStatistics.
@@ -31,7 +34,9 @@ class FirstErrorStatisticsResult(object):
         return
 
 
-
+##
+# \ingroup statistics
+# \brief Statistics collection of bit-index of first bit error 
 class FirstErrorStatistics(object):
     """Collects statistics on when decoders finished, and amount of error on
         finish

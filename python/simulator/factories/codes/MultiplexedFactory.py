@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Encoder instances that produce symbols from multiple encoders
 class MultiplexedFactory(object):
     @staticmethod
     def make_encoder(codeSpec, packetLength):

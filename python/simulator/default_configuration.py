@@ -3,6 +3,9 @@
 
 from factories import *
 
+##
+# \ingroup simulator
+# \brief Gets a list of factories to query for components
 def get_factory_list():
     """
     Returns all the factories that the simulator will be using.

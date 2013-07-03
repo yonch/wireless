@@ -11,6 +11,9 @@ import copy
 import wireless
 from FactoryCollection import FactoryCollection  
 
+##
+# \ingroup simulator
+# \brief Simulates a complete packet transmission (packet generator, encoder, mapper, channel, etc..) 
 class Simulator(object):
     def __init__(self, verbosity):
         

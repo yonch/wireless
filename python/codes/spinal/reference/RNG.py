@@ -1,6 +1,9 @@
 # Copyright (c) 2012 Jonathan Perry
 # This code is released under the MIT license (see LICENSE file).
 
+##
+# \ingroup spinal_reference
+# \brief A pseudo random number generator based on the hash specified in the Hash class.
 class RNG(object):
     '''
     A pseudo random number generator based on the hash specified in the Hash class.

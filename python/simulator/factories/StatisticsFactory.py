@@ -3,6 +3,9 @@
 
 from wireless.statistics import ErrorRateStatistics, ErrorLocationStatistics, FirstErrorStatistics
 
+##
+# \ingroup factories
+# \brief Statistics factory 
 class StatisticsFactory(object):
     def make_statistics(self, spec):
         if spec['type'] == 'errors':

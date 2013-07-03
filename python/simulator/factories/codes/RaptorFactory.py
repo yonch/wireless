@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Raptor encoders and decoders 
 class RaptorFactory(object):
     @staticmethod
     def make_encoder(codeSpec, packetLength):

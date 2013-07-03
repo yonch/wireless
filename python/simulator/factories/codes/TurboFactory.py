@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Turbo codes encoders and decoders
 class TurboFactory(object):
     @staticmethod
     def make_encoder(codeSpec, packetLength):

@@ -7,6 +7,9 @@ from wireless.protocols import OneTryProtocol
 from wireless.protocols import MultipleTryProtocol
 from wireless.protocols import RateApproxProtocol
 
+##
+# \ingroup factories
+# \brief Link-layer protocol factory
 class ProtocolFactory(object):
     def make_protocol(self, protoSpec, codeSpec, packetLength):
         if protoSpec['type'] == 'one-try':

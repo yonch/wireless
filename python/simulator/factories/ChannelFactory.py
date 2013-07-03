@@ -4,6 +4,9 @@
 import wireless
 import math
 
+##
+# \ingroup factories
+# \brief Channel simulators factory 
 class ChannelFactory(object):
     def make_channel(self, spec, signalAveragePower):
         if spec['type'] == 'AWGN' or spec['type'] == 'AWGN-1D':

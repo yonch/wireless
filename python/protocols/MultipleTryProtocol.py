@@ -3,6 +3,9 @@
 
 import numpy
 
+##
+# \ingroup protocols
+# \brief Attempts to decode at a set of times that is given beforehand 
 class MultipleTryProtocol(object):
     '''
     A protocol that attempts to decode at a set of times that is given 

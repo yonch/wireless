@@ -4,6 +4,9 @@
 def upsample32(x,y):
     return (x << 32) | y
 
+##
+# \ingroup spinal_reference
+# \brief Salsa hash function
 def salsaHash(prevState, data, numRounds, HASH_WORD_SIZE = 32):
     '''
     A reference of our salsa hash, that could be used to verify return values

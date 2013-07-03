@@ -21,6 +21,10 @@
  *
  *     @defgroup spinal Spinal Codes
  *     @brief Spinal codes
+ *     @{
+ *         @defgroup spinal_reference Python spinal code implementation
+ *         @brief Reference implementation of spinal codes in python
+ *     @}
  *
  *     @defgroup strider Strider
  *     @brief Implementation of layered approach to coding
@@ -51,6 +55,16 @@
  *
  * @defgroup detectors Detectors of successful decoding
  * @brief Detect whether packet decode was successful, or more symbols are needed
+ *
+ * @defgroup statistics Statistics collection
+ * @brief Collect statistics on code performance in different settings
+ *
+ * @defgroup simulator Simulator
+ * @brief Simulate a full packet transmission through a system
+ * @{
+ *     @defgroup factories Simulator Factories
+ *     @brief Produce components for simulation, given system specifications
+ * @}
  *
  * @defgroup util Utilities
  * @brief Support algorithms

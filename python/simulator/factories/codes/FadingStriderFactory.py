@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Factory to strider decoders over a fading channel
 class FadingStriderFactory(object):
     @staticmethod
     def make_decoder(codeSpec, packetLength, decodeSpec, mapSpec, channelSpec):

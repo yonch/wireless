@@ -1,6 +1,9 @@
 # Copyright (c) 2012 Jonathan Perry
 # This code is released under the MIT license (see LICENSE file).
 
+##
+# \ingroup spinal_reference
+# \brief Mapper from hash outputs to symbols
 class SymbolMapper(object):
     """
     Maps a 16-bit integer into a constellation point.

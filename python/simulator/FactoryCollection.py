@@ -1,6 +1,9 @@
 # Copyright (c) 2012 Jonathan Perry
 # This code is released under the MIT license (see LICENSE file).
 
+##
+# \ingroup simulator
+# \brief Aggregates multiple factories to be queried jointly for components 
 class FactoryCollection(object):
     """
     This class is intended to make adding new functionality modular through adding factories.

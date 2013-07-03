@@ -1,6 +1,9 @@
 # Copyright (c) 2012 Jonathan Perry
 # This code is released under the MIT license (see LICENSE file).
 
+##
+# \ingroup spinal_reference
+# \brief  Hashes together two integers, s and m.
 def hash_func(s, m):
     '''
     Hashes together two integers, s and m.

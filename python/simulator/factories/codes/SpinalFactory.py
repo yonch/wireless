@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Spinal encoders and decoders
 class SpinalFactory(object):
     def make_encoder(self, codeSpec, packetLength):
         if codeSpec['type'] != 'spinal':

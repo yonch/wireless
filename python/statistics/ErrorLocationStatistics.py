@@ -4,6 +4,9 @@
 import numpy
 import wireless
 
+##
+# \ingroup statistics
+# \brief Collected statistics on location of errors 
 class ErrorLocationStatisticsResult(object):
     """
     A result object for the ErrorLocationStatistics.
@@ -30,7 +33,9 @@ class ErrorLocationStatisticsResult(object):
         return
 
 
-
+##
+# \ingroup statistics
+# \brief Statistic collector of location of errors 
 class ErrorLocationStatistics(object):
     """Collects statistics on when decoders finished, and amount of error on
         finish

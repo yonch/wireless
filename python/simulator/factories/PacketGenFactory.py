@@ -3,6 +3,9 @@
 
 import wireless
 
+##
+# \ingroup factories
+# \brief Packet generator factory
 class PacketGenFactory(object):
     def make_packet_generator(self, spec):
         if spec['type'] == 'random':

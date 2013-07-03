@@ -3,6 +3,9 @@
 
 import wireless
 
+##
+# \ingroup factories
+# \brief Demappers factory 
 class DemapFactory(object):
     def make_demapper(self, mapSpec, demapSpec):
         if demapSpec['type'] == 'null':

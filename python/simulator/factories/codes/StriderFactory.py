@@ -2,6 +2,9 @@
 # This code is released under the MIT license (see LICENSE file).
 import wireless
 
+##
+# \ingroup factories
+# \brief Strider encoders and decoders 
 class StriderFactory(object):
     @staticmethod
     def make_encoder(codeSpec, packetLength):

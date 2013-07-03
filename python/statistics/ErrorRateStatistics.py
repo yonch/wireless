@@ -6,6 +6,9 @@ import wireless
 
 from wireless.util.serialization.results_pb2 import ErrorRateResults
 
+##
+# \ingroup statistics
+# \brief Collected statistics on number of errors 
 class ErrorRateStatisticsResult(object):
     """
     A result object for the FinishStatistics.
@@ -60,6 +63,9 @@ class ErrorRateStatisticsResult(object):
 
 
 
+##
+# \ingroup statistics
+# \brief Statistics collector of number of errors 
 class ErrorRateStatistics(object):
     """Collects statistics on when decoders finished, and amount of error on
         finish
