@@ -4,7 +4,6 @@
 import wireless
 
 from wireless.protocols import OneTryProtocol
-from wireless.protocols import FastFourwayProtocol 
 from wireless.protocols import MultipleTryProtocol
 from wireless.protocols import RateApproxProtocol
 

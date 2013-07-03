@@ -53,14 +53,7 @@ class SpinalFactory(object):
         return decoder
     
     def make_protocol(self, protoSpec, codeSpec, packetLength):
-        if protoSpec['type'] == 'faster':
-            spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
-            punc = self._get_puncturing(codeSpec['puncturing'], spineLength)
-
-            return FastFourwayProtocol(1,
-                                       protoSpec['maxPasses'],
-                                       punc)
-        elif protoSpec['type'] == 'sequential':
+        if protoSpec['type'] == 'sequential':
             spineLength = self._get_num_blocks(codeSpec['k'], packetLength)
             
             if codeSpec['puncturing']['type'] != '8-way':
